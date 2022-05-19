@@ -107,10 +107,10 @@ char *termname = "st-256color";
  *
  *	stty tabs
  */
-unsigned int tabspaces = 8;
+unsigned int tabspaces = 4;
 
 /* bg opacity */
-float alpha = 0.8, alphaUnfocused = 0.6;
+float alpha = 0.8, alphaUnfocused = 0.7;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -160,7 +160,7 @@ unsigned int bg = 17, bgUnfocused = 16;
  * 6: Bar ("|")
  * 7: Snowman ("☃")
  */
-static unsigned int cursorshape = 2;
+static unsigned int cursorshape = 7;
 
 /*
  * Default columns and rows numbers
@@ -195,11 +195,11 @@ static uint forcemousemod = ShiftMask;
  */
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
-	{XK_ANY_MOD, Button2, selpaste, {.i = 0}, 1},
-	{ShiftMask, Button4, ttysend, {.s = "\033[5;2~"}},
-	{XK_ANY_MOD, Button4, ttysend, {.s = "\031"}},
-	{ShiftMask, Button5, ttysend, {.s = "\033[6;2~"}},
-	{XK_ANY_MOD, Button5, ttysend, {.s = "\005"}},
+	{ XK_ANY_MOD, 		Button2, selpaste, 	 {.i = 0}, 	1},
+	{ ShiftMask, 		Button4, ttysend, 	 {.s = "\033[5;2~"}},
+	{ XK_ANY_MOD, 		Button4, ttysend, 	 {.s = "\031"}},
+	{ ShiftMask, 		Button5, ttysend, 	 {.s = "\033[6;2~"}},
+	{ XK_ANY_MOD, 		Button5, ttysend, 	 {.s = "\005"}},
 };
 
 /* Internal keyboard shortcuts. */
@@ -212,8 +212,8 @@ static Shortcut shortcuts[] = {
 	{ ControlMask, 		XK_Print, 	toggleprinter, 	{.i =  0} },
 	{ ShiftMask, 		XK_Print, 	printscreen, 	{.i =  0} },
 	{ XK_ANY_MOD, 		XK_Print, 	printsel, 	{.i =  0} },
-	{ TERMMOD, 		XK_Prior, 	zoom, 		{.f = +1} },
-	{ TERMMOD, 		XK_Next, 	zoom, 		{.f = -1} },
+	{ ControlMask, 		XK_Up,	 	zoom, 		{.f = +1} },
+	{ ControlMask, 		XK_Down, 	zoom, 		{.f = -1} },
 	{ TERMMOD, 		XK_Home, 	zoomreset, 	{.f =  0} },
 	{ TERMMOD, 		XK_C, 		clipcopy, 	{.i =  0} },
 	{ TERMMOD, 		XK_V, 		clippaste, 	{.i =  0} },
