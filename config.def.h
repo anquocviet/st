@@ -8,7 +8,9 @@
 static char *font = "Hack:pixelsize=16:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
-	"FiraCode NF:pixelsize=15:antialias=true:autohint=true"};
+	"Noto Color Emoji:pixelsize=15:antialias=true:autohint=true",
+	"FiraCode NF:pixelsize=15:antialias=true:autohint=true",
+};
 
 static int borderpx = 2;
 
