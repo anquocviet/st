@@ -38,7 +38,7 @@ dist: clean
 	cp -R FAQ LEGACY TODO LICENSE Makefile README config.mk\
 		config.def.h st.info st.1 arg.h st.h win.h $(SRC)\
 		st-$(VERSION)
-	tar -cf - st-$(VERSION) | gzip > st-$(VERSION).tar.gz config.h
+	tar -cf - st-$(VERSION) | gzip > st-$(VERSION).tar.gz config.h *.rej *.orig *.o
 	rm -rf st-$(VERSION)
 
 install: st
