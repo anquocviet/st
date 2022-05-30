@@ -8,8 +8,9 @@
 static char *font = "JetBrains Mono:style=Regular:pixelsize=16:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
-	"Noto Color Emoji:pixelsize=15:antialias=true:autohint=true",
-	"FiraCode NF:pixelsize=15:antialias=true:autohint=true",
+	"Noto Color Emoji:style=Regular:pixelsize=15:antialias=true:autohint=true",
+	"FiraCode NF:style=Regular:pixelsize=15:antialias=true:autohint=true",
+	"Font Awesome 6 Pro, Font Awesome 6 Pro Solid:style=Solid:pixelsize=15:antialias=true:autohint=true",
 };
 
 static int borderpx = 2;
@@ -156,7 +157,7 @@ unsigned int bg = 16, bgUnfocused = 16;
  * 2: Block ("█")
  * 4: Underline ("_")
  * 6: Bar ("|")
- * 7: Snowman ("☃")
+ * 7: Snowman ("")
  */
 static unsigned int cursorshape = 2;
 
