@@ -8,7 +8,7 @@
 static char *font = "JetBrains Mono:style=Regular:pixelsize=16:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
-	"Noto Color Emoji:style=Regular:pixelsize=15:antialias=true:autohint=true",
+	"Noto Color Emoji:style=Regular:pixelsize=15:antialias=true:autohint=false",
 	"FiraCode NF:style=Regular:pixelsize=15:antialias=true:autohint=true",
 	"Font Awesome 6 Pro, Font Awesome 6 Pro Solid:style=Solid:pixelsize=15:antialias=true:autohint=true",
 };
@@ -23,7 +23,7 @@ static int borderpx = 2;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char *shell = "/bin/sh";
+static char *shell = "/bin/fish";
 char *utmp = NULL;
 /* scroll program: to enable use a string like "scroll" */
 char *scroll = NULL;
@@ -81,7 +81,7 @@ static unsigned int cursorthickness = 2;
  * 0: disable (render all U25XX glyphs normally from the font).
  */
 const int boxdraw = 1;
-const int boxdraw_bold = 0;
+const int boxdraw_bold = 1;
 
 /* braille (U28XX):  1: render as adjacent "pixels",  0: use font */
 const int boxdraw_braille = 0;
@@ -110,10 +110,10 @@ char *termname = "st-256color";
  *
  *	stty tabs
  */
-unsigned int tabspaces = 4;
+unsigned int tabspaces = 2;
 
 /* bg opacity */
-float alpha = 0.8, alphaUnfocused = 0.7;
+float alpha = 0.8, alphaUnfocused = 0.2;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
