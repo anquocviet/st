@@ -8,6 +8,7 @@
 static char *font = "JetBrains Mono:style=Regular:pixelsize=15:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
+	"JetBrainsMono Nerd Font:style=Regular:pixelsize=15:antialias=true:autohint=true",
 	"Noto Color Emoji:style=Regular:pixelsize=15:antialias=true:autohint=false",
 	"FiraCode Nerd Font:style=Regular:pixelsize=15:antialias=true:autohint=true",
 	"Font Awesome 6 Pro, Font Awesome 6 Pro Solid:style=Solid:pixelsize=15:antialias=true:autohint=true",
