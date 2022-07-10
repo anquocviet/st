@@ -118,40 +118,45 @@ float alpha = 0.92, alphaUnfocused = 0.85;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-    /* 8 normal colors */
-    [0] = "#3b4252", /* black   */
-    [1] = "#bf616a", /* red     */
-    [2] = "#a3be8c", /* green   */
-    [3] = "#ebcb8b", /* yellow  */
-    [4] = "#81a1c1", /* blue    */
-    [5] = "#b48ead", /* magenta */
-    [6] = "#88c0d0", /* cyan    */
-    [7] = "#e5e9f0", /* white   */
-    
-    /* 8 bright colors */
-    [8]  = "#4c566a", /* black   */
-    [9]  = "#bf616a", /* red     */
-    [10] = "#a3be8c", /* green   */
-    [11] = "#ebcb8b", /* yellow  */
-    [12] = "#81a1c1", /* blue    */
-    [13] = "#b48ead", /* magenta */
-    [14] = "#8fbcbb", /* cyan    */
-    [15] = "#eceff4", /* white   */
-    
-    /* special colors */
-    [256] = "#2e3440", /* background */
-    [257] = "#d8dee9", /* foreground */
+
+  /* 8 normal colors */
+  [0] = "#1a0e0e", /* black   */
+  [1] = "#271616", /* red     */
+  [2] = "#3d2626", /* green   */
+  [3] = "#5d3b3b", /* yellow  */
+  [4] = "#845656", /* blue    */
+  [5] = "#ae7a7a", /* magenta */
+  [6] = "#c7abab", /* cyan    */
+  [7] = "#e9e0e0", /* white   */
+
+  /* 8 bright colors */
+  [8]  = "#82be8a", /* black   */
+  [9]  = "#c07c7c", /* red     */
+  [10] = "#7f99cb", /* green   */
+  [11] = "#b7c4e2", /* yellow  */
+  [12] = "#b3bed8", /* blue    */
+  [13] = "#dba6a6", /* magenta */
+  [14] = "#93b7b7", /* cyan    */
+  [15] = "#6bac75", /* white   */
+
+  /* special colors */
+  [256] = "#100707", /* background */
+  [257] = "#dfd1d1", /* foreground */
 };
+
 
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 257;
-unsigned int defaultbg = 256;
-unsigned int defaultcs = 257;
+static unsigned int defaultfg = 257;
+static unsigned int defaultbg = 256;
+static unsigned int defaultcs = 257;
 static unsigned int defaultrcs = 257;
 unsigned int bg = 16, bgUnfocused = 16;
+
+static unsigned int defaultitalic = 7;
+static unsigned int defaultunderline = 7;
 
 /*
  * Default shape of cursor
